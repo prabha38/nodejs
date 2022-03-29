@@ -12,13 +12,13 @@ pipeline {
     }       
     stage('Install dependencies') {
       steps {
-        sh 'npm install'
+        sh 'npm install && sleep 10 && docker build -t prabha038/nodeapp . && sleep 5 && docker push prabha038/nodeapp:latest'
       }
-    stage('build') {
-      steps {
-        sh 'docker build -t prabha038/nodeapp . && sleep 5 && docker push prabha038/nodeapp:latest'		
-      }
-    }
+#    stage('build') {
+#      steps {
+#        sh 'docker build -t prabha038/nodeapp . && sleep 5 && docker push prabha038/nodeapp:latest'		
+#      }
+#    }
   }
   }
 }
