@@ -17,8 +17,7 @@ pipeline {
       }
     stage('Docker build') {
       steps {
-        sh 'docker build -t prabha038/nodeapp . && sleep 5 && docker push prabha038/nodeapp:latest'
-		
+        sh 'docker build -t prabha038/nodeapp . && sleep 5 && docker push prabha038/nodeapp:latest'		
       }
     }
   }
