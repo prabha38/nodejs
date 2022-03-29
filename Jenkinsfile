@@ -13,7 +13,7 @@ pipeline {
         
     stage('Install dependencies') {
       steps {
-        bat 'npm install'
+        ssh 'npm install'
       }
     }
   }
